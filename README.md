@@ -9,16 +9,12 @@ So far, the project includes:
 
 This README and the project will be **updated continuously** as new features are added.
 
----
-
 ## Project Structure
 
 - `src/cmps/` — React components
 - `src/pages/` — React pages components
 - `src/service/toyService.js` — ToyStore service managing toy data
 - `src/App.jsx` — Main app component
-
----
 
 ## Next Steps
 
@@ -36,8 +32,8 @@ Follow these steps to run the project locally on your machine:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-cd YOUR_REPO_NAME
+git clone https://github.com/snoxlax/ca-ToyStore-ex.git
+cd ca-ToyStore-ex
 ```
 
 ### 2. Install dependencies
