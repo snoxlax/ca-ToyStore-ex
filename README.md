@@ -1,16 +1,63 @@
-# React + Vite
+# React + Vite ToyStore Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I initialized a **Vite project with React**, installed the necessary libraries, and created a **first draft** of the project.
 
-Currently, two official plugins are available:
+So far, the project includes:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- A **simple list** component
+- A basic **ToyStore service** to manage data
 
-## React Compiler
+This README and the project will be **updated continuously** as new features are added.
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `src/cmps/` — React components
+- `src/pages/` — React pages components
+- `src/service/toyService.js` — ToyStore service managing toy data
+- `src/App.jsx` — Main app component
+
+---
+
+## Next Steps
+
+- Expand the ToyStore service
+- Add more interactive components
+- Integrate state management (Redux)
+- Add styling and layout improvements
+
+---
+
+## Getting Started
+
+Follow these steps to run the project locally on your machine:
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+cd YOUR_REPO_NAME
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Run the development server
+
+```bash
+npm run dev
+```
+
+- Open your browser at the URL shown in the terminal (usually `http://localhost:5173`) to see the app.
+
+### 4. Build for production
+
+```bash
+npm run build
+```
+
+- The production-ready files will be in the `dist` folder.
