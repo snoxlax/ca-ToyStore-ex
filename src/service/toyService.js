@@ -1,4 +1,5 @@
-const STORE_KEY = 'toyDB';
+import { utils } from './utils';
+
 _createToys();
 export const toyService = {
   query,
@@ -8,7 +9,7 @@ export const toyService = {
 };
 
 function query(filterBy = {}) {
-  const store = _loadFromStorage();
+  const store = utils.loadFromStorage();
   return store;
 }
 
@@ -16,7 +17,7 @@ function remove(_toyId) {
   const store = query();
   let toyToRemove = {};
   const filterdStore = store.filterBy((item) => item._id === _toyId);
-  _saveToStorage(filterdStore);
+  utils.saveToStorage(filterdStore);
 }
 
 function get(_toyId) {
@@ -27,8 +28,16 @@ function get(_toyId) {
 
 function save(toy) {
   const store = query();
-  store.push(toy);
-  _saveToStorage(store);
+  if (toy._id) {
+    const index = store.findIndex((item) => item._id === toy._id);
+    store.splice(index, 1, toy);
+  } else {
+    toy._id = 't' + utils.createRandomId();
+    toy.createdAt = Date.now();
+    store.push(toy);
+  }
+  utils.saveToStorage(store);
+  return toy;
 }
 
 function _createToys() {
@@ -36,38 +45,20 @@ function _createToys() {
   if (!toys || !toys.length) {
     toys = [];
 
-    const labels = [
-      'On wheels',
-      'Box game',
-      'Art',
-      'Baby',
-      'Doll',
-      'Puzzle',
-      'Outdoor',
-      'Battery Powered',
-    ];
     for (let i = 0; i < 20; i++) {
       toys.push({
-        _id: 't' + i * Math.random(),
-        name: 'Talking Doll',
-        price: Math.random() * 10,
+        _id: 't' + utils.createRandomId(),
+        name: utils.randomThing('name'),
+        price: +(Math.random() * 100).toFixed(2),
         labels: [
-          labels[Math.floor(Math.random() * labels.length)],
-          labels[Math.floor(Math.random() * labels.length)],
-          labels[Math.floor(Math.random() * labels.length)],
+          utils.randomThing('label'),
+          utils.randomThing('label'),
+          utils.randomThing('label'),
         ],
         createdAt: Date.now(),
         inStock: true,
       });
     }
-    _saveToStorage(toys);
+    utils.saveToStorage(toys);
   }
-}
-
-function _saveToStorage(store) {
-  localStorage.setItem(STORE_KEY, JSON.stringify(store));
-}
-
-function _loadFromStorage() {
-  return JSON.parse(localStorage.getItem(STORE_KEY));
 }

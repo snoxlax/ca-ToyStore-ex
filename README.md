@@ -4,8 +4,10 @@ I initialized a **Vite project with React**, installed the necessary libraries, 
 
 So far, the project includes:
 
-- A **simple list** component
-- A basic **ToyStore service** to manage data
+- **Toys list display** in the frontend
+- **Toy preview** components for each toy
+- **Add/Edit toy** functionality with dedicated page
+- Enhanced **ToyStore service** with backend adjustments
 
 This README and the project will be **updated continuously** as new features are added.
 
@@ -14,12 +16,14 @@ This README and the project will be **updated continuously** as new features are
 - `src/cmps/` — React components
 - `src/pages/` — React pages components
 - `src/service/toyService.js` — ToyStore service managing toy data
+- `src/service/utils.js` — Utility service for different tooling functions
 - `src/App.jsx` — Main app component
 
 ## Next Steps
 
-- Expand the ToyStore service
-- Add more interactive components
+- Implement **toy deletion** functionality
+- Add **details page** for each toy
+- Create **filter component** with debounce for toy list
 - Integrate state management (Redux)
 - Add styling and layout improvements
 

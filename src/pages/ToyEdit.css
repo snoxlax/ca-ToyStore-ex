@@ -1,0 +1,90 @@
+.toy-edit-container {
+  height: 100%;
+  width: 100%;
+  background: #f8fafc;
+}
+
+.toy-edit {
+  width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(207, 168, 168, 0.1);
+}
+
+.toy-edit h2 {
+  margin-bottom: 1.5rem;
+  color: #3b3b3b;
+  text-align: center;
+}
+
+.toy-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #3b3b3b;
+}
+
+.form-group input {
+  padding: 0.75rem;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #5e3910;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.checkbox-group {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.checkbox-group input[type='checkbox'] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.submit-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #6e0000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #c20017;
+}
+
+.submit-btn:active {
+  transform: translateY(1px);
+}
