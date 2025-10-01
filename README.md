@@ -60,4 +60,4 @@ npm run dev
 npm run build
 ```
 
-- The production-ready files will be in the `dist` folder.
+- The production-ready files will be in the `dist` folder
